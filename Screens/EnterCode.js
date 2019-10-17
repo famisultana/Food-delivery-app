@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, View, KeyboardAvoidingView} from 'react-native';
 import MyBackgroundImage from '../Components/MyBackgroundImage';
-import image from '../Images/bgimage.jpg';
+import image from '../utilities/images/bgimage.jpg';
 import Heading from '../Components/Heading';
 import Inputbox from '../Components/Inputbox';
 import styles from '../Utility';
@@ -25,7 +25,9 @@ export default class EnterCode extends Component {
             placeholder="Enter 4 digit code here"
             style={{}}></Inputbox>
           <View style={{width: '100%', paddingLeft: 30, paddingRight: 30}}>
-            <Button title="Done" color={styles.Theme.color}></Button>
+            <Button title="Done" color={styles.Theme.color}
+            onPress={() => this.props.navigation.navigate('Categories')}
+            ></Button>
           </View>
 
           <ColoredText

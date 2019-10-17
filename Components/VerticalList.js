@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import VerticalCard from './VerticalCard';
 import { FlatList } from 'react-native';
-import image from '../Images/2.jpg';
+import image from '../utilities/images/2.jpg';
 import HorizontalCard from './HorizontalCard';
 
 const data = [

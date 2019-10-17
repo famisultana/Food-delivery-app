@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-
+import {View} from 'react-native';
+//import CheckBox from '@react-native-community/checkbox';
 import image from '../utilities/images/bgimage.jpg';
 import Inputbox from '../Components/Inputbox';
 import Heading from '../Components/Heading';
 import ColoredText from '../Components/ColoredText';
 import MyBackgroundImage from '../Components/MyBackgroundImage';
-import styles from '../Utility';
 import {
   Dimensions,
   StyleSheet,
@@ -14,8 +13,13 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-export default class SignIn extends Component {
+export default class SignUp extends Component {
+  state = {
+    ischecked: false,
+  };
+
   render() {
+    const buttoncolor = this.state.ischecked ? '#7ae43a' : 'grey';
     return (
       <View>
         <MyBackgroundImage source={image} opacity={0.7}>
@@ -27,18 +31,18 @@ export default class SignIn extends Component {
               alignItems: 'center',
             }}>
             <View style={{flex: 1, justifyContent: 'center'}}>
-              <Heading title="SIGN IN" subtitles="Enter Your Data"></Heading>
+              <Heading title="SIGN UP" subtitles="Add Your Details"></Heading>
             </View>
 
             <View style={{flex: 4, justifyContent: 'center'}}>
               <Inputbox
+                name="Name"
+                type="name"
+                placeholder="Enter Your Name"></Inputbox>
+              <Inputbox
                 name="Phone"
                 type="phone"
                 placeholder="0303-XXXXXXX"></Inputbox>
-              <Inputbox
-                name="Password"
-                type="password"
-                placeholder="******"></Inputbox>
 
               <View
                 style={{
@@ -48,16 +52,20 @@ export default class SignIn extends Component {
                   alignItems: 'center',
                   marginBottom: '5%',
                 }}>
+                {/* <CheckBox
+                  onChange={() => this.setState({ischecked: true})}></CheckBox> */}
                 <ColoredText
-                  green="Forgot Password?"
+                  white="I agree with "
+                  green="Terms and Condition"
                   onPress={() =>
-                    alert('Redirect to forgot password Screen')
+                    alert('Terms and conditions pressed')
                   }></ColoredText>
               </View>
 
-              <Button title="Sign In" color={styles.Theme.color}
-              onPress={() => this.props.navigation.navigate('EnterCode')}
-              ></Button>
+              <Button
+                disabled={this.props.ischecked === false ? true : false}
+                title="Sign Up"
+                color={buttoncolor}></Button>
 
               <View
                 style={{
@@ -68,9 +76,9 @@ export default class SignIn extends Component {
                   alignItems: 'center',
                 }}>
                 <ColoredText
-                  white="New Here? "
-                  green="Sign Up"
-                  onPress={() => this.props.navigation.navigate('SignUp')}></ColoredText>
+                  white="I already have "
+                  green="an account"
+                  onPress={() => this.props.navigation.navigate('SignIn')}></ColoredText>
               </View>
             </View>
           </KeyboardAvoidingView>

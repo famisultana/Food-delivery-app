@@ -1,16 +1,30 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Button, View, Text } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Categories from './Screens/Categories';
+import Home from './Screens/Home';
 import SignIn from './Screens/SignIn';
 import EnterCode from './Screens/EnterCode';
-import Home from './Screens/Home';
-import Categories from './Screens/Categories';
+import SignUp from './Screens/SignUp';
 
-export default class App extends Component {
+const RootStack = createStackNavigator(
+  {
+    SignIn:SignIn,
+    SignUp:SignUp,
+    EnterCode:EnterCode,  
+    Categories: Categories,
+    MainScreen:Home,
+  },
+  {
+    initialRouteName: 'SignIn',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+export default class App extends React.Component {
   render() {
-    return (
-      <View >
-     <Categories/>
-      </View>
-    );
+    return <AppContainer />;
   }
 }

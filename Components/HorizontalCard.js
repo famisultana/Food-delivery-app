@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet } from 'react-native';
-import image from '../Images/2.jpg';
+import image from '../utilities/images/2.jpg';
 
 
 const data = {
