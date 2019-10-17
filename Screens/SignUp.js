@@ -11,12 +11,28 @@ import {
   StyleSheet,
   Button,
   KeyboardAvoidingView,
+  BackHandler
 } from 'react-native';
 
 export default class SignUp extends Component {
+
+  static navigationOptions = {
+    header: null};
   state = {
     ischecked: false,
   };
+
+  componentDidMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
+}
+
+componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
+}
+
+onBackButtonPressed() {
+    return true;
+}
 
   render() {
     const buttoncolor = this.state.ischecked ? '#7ae43a' : 'grey';

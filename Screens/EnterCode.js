@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, KeyboardAvoidingView} from 'react-native';
+import {Button, View, KeyboardAvoidingView,BackHandler} from 'react-native';
 import MyBackgroundImage from '../Components/MyBackgroundImage';
 import image from '../utilities/images/bgimage.jpg';
 import Heading from '../Components/Heading';
@@ -8,6 +8,21 @@ import styles from '../Utility';
 import ColoredText from '../Components/ColoredText';
 
 export default class EnterCode extends Component {
+  static navigationOptions = {
+    header: null};
+
+    componentDidMount() {
+      BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
+    }
+  
+    componentWillUnmount() {
+      BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
+    }
+  
+    onBackButtonPressed() {
+      return true;
+    }
+    
   render() {
     return (
       <MyBackgroundImage source={image} opacity={0.7}>
