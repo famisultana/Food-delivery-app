@@ -6,8 +6,8 @@ class SearchBar extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Icon name='search'></Icon>
-                <Text>Search</Text>
+                <Icon name='search' style={{fontSize:16, marginLeft:5}}></Icon>
+                <Text style={{marginLeft:10}}>Search</Text>
             </View>
         );
     }
@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '90%',
         alignSelf: 'center',
-        backgroundColor: 'red',
         height: 50,
         margin: 10,
         padding: 10,
-        alignContent: 'center',
-        justifyContent: 'space-between'
+        alignItems: 'center',
+        borderRadius:2,
+        elevation:1,
     }
 });
 

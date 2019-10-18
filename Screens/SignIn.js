@@ -16,18 +16,11 @@ import {
 } from 'react-native';
 
 export default class SignIn extends Component {
-    componentDidMount() {
-      BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
-    }
-  
-    componentWillUnmount() {
-      BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
-    }
-  
-    onBackButtonPressed() {
-      return true;
-    }
 
+  static navigationOptions = {
+    header: null
+  };
+    
 
   render() {
     return (

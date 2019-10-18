@@ -18,31 +18,31 @@ const RootStack = createStackNavigator(
     MainScreen: Home,
   },
   {
-    initialRouteName: 'MainScreen',
+    initialRouteName: 'SignIn',
 
     defaultNavigationOptions: {
-      headerTitle:(
-<View>
-<Text style={{color:'red', fontSize:20}}>Home</Text>
-</View>
+      headerTitle: (
+        <View>
+          <Text style={{ color: 'red', fontSize: 20 }}>Home</Text>
+        </View>
       ),
       headerLeft: (
-        <Icon.Button 
-        name="bars" 
-        color='red' 
-        backgroundColor='none'
-        style={{ fontSize: 20, marginLeft: 10 }}
-        onPress={() => alert('back')}
+        <Icon.Button
+          name="bars"
+          color='red'
+          backgroundColor='none'
+          style={{ fontSize: 20, marginLeft: 10 }}
+          onPress={() => alert('back')}
         >
 
         </Icon.Button>
       ),
       headerRight: (
-        <Icon.Button 
-        name='shopping-cart' 
-        color='red' 
-        backgroundColor='none'
-        style={{ fontSize: 20, marginRight: 10 }}
+        <Icon.Button
+          name='shopping-cart'
+          color='red'
+          backgroundColor='none'
+          style={{ fontSize: 20, marginRight: 10 }}
         >
 
         </Icon.Button>
