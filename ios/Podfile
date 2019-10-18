@@ -32,4 +32,6 @@ target 'FoodApp' do
 
   use_unimodules!
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end

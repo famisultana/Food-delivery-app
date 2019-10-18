@@ -16,7 +16,7 @@ class Categories extends Component {
         return (
             
                 <MyBackgroundImage source={background}>
-                    <Header/>
+    
                 <View style={styles.container}>
                 <TouchableNativeFeedback onPress={() => this.props.navigation.navigate('MainScreen')}>
                 <View style={styles.category}>
