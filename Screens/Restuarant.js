@@ -16,13 +16,15 @@ class Restuarant extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground source={image} style={styles.image}>
+                
+                <ImageBackground source={image} style={styles.image} imageStyle={{opacity:0.6}}>
                 <View style={styles.cardInfo}>
                     <Text style={{fontSize:24, fontWeight:'bold',color:'white',textTransform:'uppercase'}}>Delizia</Text>
                     <Text style={styles.cardText}>Cakes, Biscuits and Bakery items</Text>
                     <Text  style={styles.cardText}>Malir Cantonment</Text>
                 </View>
                 </ImageBackground>
+                
                 
                 
                 <View style={{
@@ -52,21 +54,23 @@ class Restuarant extends Component {
 
 const styles=StyleSheet.create({
 container:{
-flex:1
+flex:1,
 },
 
 image:{
 width:'100%',
-height:150,
+height:180,
 justifyContent:'center',
 alignItems:'center',
-backgroundColor:'rgba(0,0,0,0.5)'
+
 },
 
 cardInfo:{
-    margin:10,
+    flex:1,
+    width:'100%',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    backgroundColor:'rgba(0,0,0,0.4)'
 },
 cardText:{
     color:'white',
@@ -74,7 +78,7 @@ cardText:{
 },
 infoHead:{
     textTransform:'uppercase',
-    fontSize:10,
+    fontSize:12,
     color:colors.secondary
 },
 info:{
