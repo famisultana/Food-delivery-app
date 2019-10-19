@@ -6,22 +6,11 @@ import Heading from '../Components/Heading';
 import Inputbox from '../Components/Inputbox';
 import colors from '../utilities/colors';
 import ColoredText from '../Components/ColoredText';
+import Logo from '../Components/Logo';
 
 export default class EnterCode extends Component {
   static navigationOptions = {
     header: null};
-
-    componentDidMount() {
-      BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPressed);
-    }
-  
-    componentWillUnmount() {
-      BackHandler.removeEventListener('hardwareBackPress', this.onBackButtonPressed);
-    }
-  
-    onBackButtonPressed() {
-      return true;
-    }
     
   render() {
     return (
@@ -34,7 +23,8 @@ export default class EnterCode extends Component {
             justifyContent: 'space-around',
             alignItems: 'center',
           }}>
-          <Heading title="Enter Code" subtitles="from SMS"></Heading>
+            <Logo/>
+          <Heading title="Enter Code" subtitle="from SMS"></Heading>
           <Inputbox
             name="Code"
             placeholder="Enter 4 digit code here"

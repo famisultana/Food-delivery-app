@@ -37,11 +37,11 @@ const data = [
 export default class HorizontalList extends Component {
   render() {
     return (
-      <View>
+      <View style={{marginBottom:10}}>
         <FlatList 
         horizontal={true}
             data={data}
-            renderItem={({ item }) => <HorizontalCard item={item}/>}/>
+            renderItem={({ item }) => <HorizontalCard item={item} navigation={this.props.navigation}/>}/>
 
         
       </View>

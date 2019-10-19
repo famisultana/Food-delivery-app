@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import colors from '../utilities/colors';
 
 const Heading = props => {
+  const subtitle=()=>{
+    if(props.subtitle){
+      return (<Text style={[styles.subtitle, props.style]}>{props.subtitle}</Text>);
+    }
+  }
   return (
-    <View style={[styles.container, props.style]}>
-      <Text style={styles.heading}>{props.title}</Text>
-      <Text style={styles.subheading}> {props.subtitles} </Text>
+    <View>
+      <Text style={[styles.text, props.style]}>{props.title}</Text>
+      {subtitle}
     </View>
   );
 };
@@ -13,19 +19,16 @@ const Heading = props => {
 export default Heading;
 
 const styles = StyleSheet.create({
-  container: {},
-
-  heading: {
-    fontSize: 34,
-    color: '#7ae43a',
-    fontWeight: '400',
-
-    alignSelf: 'center',
+  text: {
+    fontSize: 36,
+    color: colors.secondary,
+    fontWeight: 'bold',
+    margin: 10
   },
-  subheading: {
+  subtitle: {
     alignSelf: 'center',
-    color: 'white',
-    fontWeight: '600',
-    fontSize: 17,
-  },
+    fontSize: 20,
+    color: colors.headerFont
+  }
+
 });

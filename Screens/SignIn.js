@@ -14,6 +14,7 @@ import {
   KeyboardAvoidingView,
   BackHandler
 } from 'react-native';
+import Logo from '../Components/Logo';
 
 export default class SignIn extends Component {
 
@@ -33,8 +34,9 @@ export default class SignIn extends Component {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+              <Logo/>
             <View style={{flex: 1, justifyContent: 'center'}}>
-              <Heading title="SIGN IN" subtitles="Enter Your Data"></Heading>
+              <Heading title="SIGN IN" subtitle="Enter Your Data"></Heading>
             </View>
 
             <View style={{flex: 4, justifyContent: 'center'}}>
@@ -57,13 +59,16 @@ export default class SignIn extends Component {
                 }}>
                 <ColoredText
                   green="Forgot Password?"
-                  onPress={() =>
-                    alert('Redirect to forgot password Screen')
-                  }></ColoredText>
+                  onPress={() =>this.props.navigation.navigate('EnterCode')}
+                  
+                 ></ColoredText>
               </View>
 
               <Button title="Sign In" color={colors.secondary}
-              onPress={() => this.props.navigation.navigate('EnterCode')}
+              onPress={() => this.props.navigation.navigate('Categories')}
+               
+            
+              
               ></Button>
 
               <View

@@ -7,21 +7,23 @@ import { SafeAreaView, View, FlatList, StyleSheet, Text, Image, Dimensions, Touc
 class VerticalCard extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Image source={image2} style={styles.logo} />
-                    <View style={{}}>
-                        <Text style={styles.heading}>Delizia</Text>
-                        <Text>Cakes, Biscuits, Bakery items</Text>
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Restuarant')}>
+                <View style={styles.container}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image source={image2} style={styles.logo} />
+                        <View style={{}}>
+                            <Text style={styles.heading}>Delizia</Text>
+                            <Text>Cakes, Biscuits, Bakery items</Text>
+                        </View>
                     </View>
-                </View>
-                <Image source={image} style={styles.image} />
-                <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
-                    <View style={styles.cardInfo}><Icon name='check-circle' style={styles.icon}/><Text>No minimum</Text></View>
-                    <View style={styles.cardInfo}><Icon name='map-marker-alt' style={styles.icon}/><Text>Malir Cantt</Text></View>
-                </View>
+                    <Image source={image} style={styles.image} />
+                    <View style={{ flexDirection: 'row', justifyContent: 'flex-start' }}>
+                        <View style={styles.cardInfo}><Icon name='check-circle' style={styles.icon} /><Text>No minimum</Text></View>
+                        <View style={styles.cardInfo}><Icon name='map-marker-alt' style={styles.icon} /><Text>Malir Cantt</Text></View>
+                    </View>
 
-            </View>
+                </View>
+            </TouchableWithoutFeedback>
         );
     }
 }
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#d6d7da',
         margin: 10,
-        marginTop:0
+        marginTop: 0
     },
     text: {
         fontSize: 18,
@@ -56,15 +58,15 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 20
     },
-    cardInfo:{
-        flexDirection: 'row', 
+    cardInfo: {
+        flexDirection: 'row',
         alignItems: 'center',
-        margin:10
+        margin: 10
     },
-    icon:{
-        fontSize:20,
-        marginRight:8,
-        color:'green'
+    icon: {
+        fontSize: 20,
+        marginRight: 8,
+        color: 'green'
     }
 
 });

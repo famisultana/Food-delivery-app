@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, TextInput, StyleSheet} from 'react-native';
+import colors from '../utilities/colors';
 
 export default class Inputbox extends Component {
   render() {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   heading: {
-    color: '#7ae43a',
+    color: colors.secondary,
     fontSize: 18,
     fontWeight: '600',
   },

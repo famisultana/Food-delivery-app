@@ -7,16 +7,20 @@ import Home from './Screens/Home';
 import SignIn from './Screens/SignIn';
 import EnterCode from './Screens/EnterCode';
 import SignUp from './Screens/SignUp';
+import Restuarant from './Screens/Restuarant';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import colors from './utilities/colors';
+import SplashScreen from './Screens/SplashScreen';
 
 const RootStack = createStackNavigator(
   {
+    Splash:SplashScreen,
     SignIn: SignIn,
     SignUp: SignUp,
     EnterCode: EnterCode,
     Categories: Categories,
     MainScreen: Home,
+    Restuarant:Restuarant
   },
   {
     initialRouteName: 'MainScreen',

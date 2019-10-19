@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View,ScrollView} from 'react-native';
 import Heading from '../Components/Heading';
 import HorizontalList from '../Components/HorizontalList';
 import VerticalList from '../Components/VerticalList';
@@ -12,9 +12,13 @@ export default class Home extends Component {
     return (
       <View>      
         <SearchBar/>
-        <HorizontalList/>
-        <VerticalList/>
-        <CartButton/>
+        <ScrollView>
+          <Heading title='Most popular' style={{color:'black', fontSize:24}}/>
+        <HorizontalList navigation={this.props.navigation}/>
+        <Heading title="All Restuarants" style={{color:'black', fontSize:24}}/>
+        <VerticalList navigation={this.props.navigation}/>
+        </ScrollView>
+
       </View>
     );
   }

@@ -38,7 +38,7 @@ class VerticalList extends Component {
         return (
             <FlatList 
             data={data}
-            renderItem={({ item }) => <VerticalCard item={item}/>}/>
+            renderItem={({ item }) => <VerticalCard item={item} navigation={this.props.navigation}/>}/>
         );
     }
 }

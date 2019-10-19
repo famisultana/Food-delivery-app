@@ -15,6 +15,7 @@ import {
   KeyboardAvoidingView,
   BackHandler
 } from 'react-native';
+import Logo from '../Components/Logo';
 
 export default class SignUp extends Component {
 
@@ -48,8 +49,9 @@ onBackButtonPressed() {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+              <Logo/>
             <View style={{flex: 1, justifyContent: 'center'}}>
-              <Heading title="SIGN UP" subtitles="Add Your Details"></Heading>
+              <Heading title="SIGN UP" subtitle="Add Your Details"></Heading>
             </View>
 
             <View style={{flex: 4, justifyContent: 'center'}}>
