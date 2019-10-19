@@ -1,7 +1,8 @@
-export default colors={
-    primary: '#c02f2f',
-    secondary: '#d9d9d9',
-    header: 'black',
-    font: 'gray',
+export default colors = {
+    primary: '#8f0606',
+    secondary: '#025f69',
+    header: '#0f4d54',
+    font: 'black',
+    headerFont:'white',
     backgroundColor:'#dedede'
 };

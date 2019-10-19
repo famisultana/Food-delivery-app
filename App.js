@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text ,TouchableWithoutFeedback} from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Categories from './Screens/Categories';
@@ -8,6 +8,7 @@ import SignIn from './Screens/SignIn';
 import EnterCode from './Screens/EnterCode';
 import SignUp from './Screens/SignUp';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import colors from './utilities/colors';
 
 const RootStack = createStackNavigator(
   {
@@ -18,34 +19,37 @@ const RootStack = createStackNavigator(
     MainScreen: Home,
   },
   {
-    initialRouteName: 'SignIn',
+    initialRouteName: 'MainScreen',
 
     defaultNavigationOptions: {
-      headerTitle: (
-        <View>
-          <Text style={{ color: 'red', fontSize: 20 }}>Home</Text>
-        </View>
-      ),
+      headerStyle: {
+        backgroundColor: colors.secondary,
+      },
+      headerTintColor:colors.headerFont,
+      title:'Home',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      },
       headerLeft: (
-        <Icon.Button
+        <TouchableWithoutFeedback>
+          <Icon
           name="bars"
-          color='red'
-          backgroundColor='none'
+          color={colors.headerFont}
           style={{ fontSize: 20, marginLeft: 10 }}
           onPress={() => alert('back')}
         >
-
-        </Icon.Button>
+        </Icon>
+        </TouchableWithoutFeedback>
       ),
       headerRight: (
-        <Icon.Button
+        <TouchableWithoutFeedback>
+          <Icon
           name='shopping-cart'
-          color='red'
-          backgroundColor='none'
+          color={colors.headerFont}
           style={{ fontSize: 20, marginRight: 10 }}
         >
-
-        </Icon.Button>
+        </Icon>
+        </TouchableWithoutFeedback>
       )
     }
   }

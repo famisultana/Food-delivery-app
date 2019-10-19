@@ -6,6 +6,8 @@ import Inputbox from '../Components/Inputbox';
 import Heading from '../Components/Heading';
 import ColoredText from '../Components/ColoredText';
 import MyBackgroundImage from '../Components/MyBackgroundImage';
+import colors from '../utilities/colors';
+
 import {
   Dimensions,
   StyleSheet,
@@ -35,7 +37,7 @@ onBackButtonPressed() {
 }
 
   render() {
-    const buttoncolor = this.state.ischecked ? '#7ae43a' : 'grey';
+    const buttoncolor = this.state.ischecked ? 'red' : 'grey';
     return (
       <View>
         <MyBackgroundImage source={image} opacity={0.7}>

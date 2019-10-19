@@ -6,7 +6,7 @@ import Inputbox from '../Components/Inputbox';
 import Heading from '../Components/Heading';
 import ColoredText from '../Components/ColoredText';
 import MyBackgroundImage from '../Components/MyBackgroundImage';
-import styles from '../Utility';
+import colors from '../utilities/colors';
 import {
   Dimensions,
   StyleSheet,
@@ -62,7 +62,7 @@ export default class SignIn extends Component {
                   }></ColoredText>
               </View>
 
-              <Button title="Sign In" color={styles.Theme.color}
+              <Button title="Sign In" color={colors.secondary}
               onPress={() => this.props.navigation.navigate('EnterCode')}
               ></Button>
 
