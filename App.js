@@ -11,6 +11,7 @@ import Restuarant from './Screens/Restuarant';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import colors from './utilities/colors';
 import SplashScreen from './Screens/SplashScreen';
+import LocationBar from './Components/LocationBar';
 
 const RootStack = createStackNavigator(
   {
@@ -23,16 +24,21 @@ const RootStack = createStackNavigator(
     Restuarant:Restuarant
   },
   {
-    initialRouteName: 'SignIn',
+    initialRouteName: 'MainScreen',
 
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: colors.secondary,
+        
       },
       headerTintColor:colors.headerFont,
-      title:'Home',
+      headerTitle:(
+        <LocationBar/>
+      ),
       headerTitleStyle: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        alignSelf:'center',
+        justifyContent:'center'
       },
       headerLeft: (
         <TouchableWithoutFeedback>
