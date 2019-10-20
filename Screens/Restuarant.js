@@ -35,7 +35,8 @@ class Restuarant extends Component {
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    margin: 5
+                    margin: 5,
+                    
                 }}>
                     <View style={{ alignItems: 'flex-start' }}>
                         <Text style={styles.infoHead}>Avg. Delivery time</Text>
@@ -52,10 +53,13 @@ class Restuarant extends Component {
                 </View>
                 <ScrollableTabView
                     style={styles.container}
-                    tabBarBackgroundColor={colors.secondary}
-                    tabBarInactiveTextColor="white" 
+                    tabBarBackgroundColor='white'
+                    tabBarInactiveTextColor={colors.secondary} 
                     tabBarActiveTextColor={colors.primary}
-                    renderTabBar={() => <ScrollableTabBar/>}
+                    renderTabBar={() => <ScrollableTabBar style={{borderWidth:0,
+                        borderColor:'rgba(0,0,0,0.5)',
+                        elevation:4,
+                      }}/>}
                 >
                     <MenuList tabLabel="Cakes" />
                     <MenuList tabLabel="Brownies" />
@@ -86,7 +90,8 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0.4)'
+        backgroundColor: 'rgba(0,0,0,0.4)',
+   
     },
     cardText: {
         color: 'white',
