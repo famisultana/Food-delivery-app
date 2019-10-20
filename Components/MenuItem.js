@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import colors from '../utilities/colors';
-import image from '../utilities/images/burger.jpg';
+import image from '../utilities/images/cake.jpg';
 
 class MenuItem extends Component {
     render() {
@@ -11,12 +11,12 @@ class MenuItem extends Component {
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image source={image} style={styles.image} />
                 <View>
-                    <Text style={styles.ItemName}>Chicken Burger</Text>
-                    <Text style={styles.ItemDescription}>with cheese</Text>
+                    <Text style={styles.ItemName}>Chocolate cake</Text>
+                    <Text style={styles.ItemDescription}>2 lb</Text>
                 </View>
                 </View>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={styles.ItemPrice}>Rs. 330</Text>
+                    <Text style={styles.ItemPrice}>Rs. 930</Text>
                     <Icon name="plus-square" style={styles.addButton} />
                 </View>
             </View>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 
     image: {
         height: 80,
-        width: 80
+        width: 100
     },
 
     ItemName: {

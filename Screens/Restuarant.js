@@ -57,10 +57,11 @@ class Restuarant extends Component {
                     tabBarActiveTextColor={colors.primary}
                     renderTabBar={() => <ScrollableTabBar/>}
                 >
-                    <MenuList tabLabel="Burgers" />
-                    <MenuList tabLabel="Sandwiches" />
-                    <MenuList tabLabel="Pakistani" />
-                    <MenuList tabLabel="Beverages" />
+                    <MenuList tabLabel="Cakes" />
+                    <MenuList tabLabel="Brownies" />
+                    <MenuList tabLabel="Cupcakes" />
+                    <MenuList tabLabel="Shakes" />
+                    <MenuList tabLabel="Biscuits" />
                 </ScrollableTabView>
             </View>
         );
