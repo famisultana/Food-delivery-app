@@ -15,7 +15,7 @@ class TabBar extends Component {
             <Tab heading={ <TabHeading><Text>Deals</Text></TabHeading>}>
                 <MenuItem/>
               </Tab>
-              <Tab tabStyle={{backgroundColor:'red'}} heading={ <TabHeading><Text>Fast Food</Text></TabHeading>}>
+              <Tab heading={ <TabHeading><Text>Fast Food</Text></TabHeading>}>
                 <VerticalList/>
               </Tab>
               <Tab heading={ <TabHeading><Text>Pakistani</Text></TabHeading>}>
