@@ -37,7 +37,8 @@ class MenuList extends Component {
         return (
             <FlatList 
             data={data}
-            renderItem={({ item }) => <MenuItem item={item}/>}/>
+            renderItem={({ item }) => <MenuItem item={item}/>}
+            style={{marginTop:10}}/>
         );
     }
 }
