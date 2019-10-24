@@ -3,6 +3,7 @@ import image from '../utilities/images/1.jpg';
 import image2 from '../utilities/images/2.jpg';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, Image, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import colors from '../utilities/colors';
 
 class VerticalCard extends Component {
     render() {
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     icon: {
         fontSize: 20,
         marginRight: 8,
-        color: 'green'
+        color: colors.secondary
     }
 
 });

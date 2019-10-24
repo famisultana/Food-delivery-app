@@ -67,6 +67,7 @@ class Restuarant extends Component {
                     <MenuList tabLabel="Shakes" />
                     <MenuList tabLabel="Biscuits" />
                 </ScrollableTabView>
+                
             </View>
         );
     }

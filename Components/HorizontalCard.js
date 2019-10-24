@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text,  Image, StyleSheet, Dimensions,TouchableWithoutFeedback } from 'react-native';
 import image from '../utilities/images/1.jpg';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import colors from '../utilities/colors';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   icon: {
     fontSize: 20,
     marginRight: 8,
-    color: 'green'
+    color: colors.secondary
   }
 
 

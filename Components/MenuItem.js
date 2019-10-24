@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         margin: 10,
         paddingBottom: 10,
         marginTop: 0,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
 
     image: {

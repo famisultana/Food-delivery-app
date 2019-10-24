@@ -24,7 +24,7 @@ const RootStack = createStackNavigator(
     Restuarant:Restuarant
   },
   {
-    initialRouteName: 'Restuarant',
+    initialRouteName: 'MainScreen',
 
     defaultNavigationOptions: {
       headerStyle: {
