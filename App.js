@@ -23,10 +23,10 @@ const RootStack = createStackNavigator(
     Categories: Categories,
     MainScreen: Home,
     GroceryList, GroceryList,
-    Restaurant:Restaurants
+    Restaurant:Restaurants,
   },
   {
-    initialRouteName: 'SignIn',
+    initialRouteName: 'Restaurant',
 
     defaultNavigationOptions: {
       headerStyle: {

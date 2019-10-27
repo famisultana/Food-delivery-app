@@ -5,6 +5,7 @@ import logo from '../utilities/images/2.jpg';
 import TabBar from '../Components/TabBar';
 import colors from '../utilities/colors';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import TabNavigation from '../Components/TabNavigation';
 
 class Restaurant extends Component {
 
@@ -66,7 +67,7 @@ class Restaurant extends Component {
                         <Text style={styles.info}>Cash on Delivery</Text>
                     </View>
                 </View>
-                <TabBar />
+                <TabNavigation/>
 
             </View>
         );
