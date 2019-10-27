@@ -19,7 +19,7 @@ const data = {
 
 const HorizontalCard = (props) => {
   return (
-    <TouchableWithoutFeedback onPress={() => props.navigation.navigate('Restuarant')}>
+    <TouchableWithoutFeedback onPress={() => props.navigation.navigate('Restaurant')}>
       <View style={styles.container}>
       <Image source={image} style={styles.cardStyle} />
       <View style={{

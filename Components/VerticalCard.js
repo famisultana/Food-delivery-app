@@ -8,7 +8,7 @@ import colors from '../utilities/colors';
 class VerticalCard extends Component {
     render() {
         return (
-            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Restuarant')}>
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Restaurant')}>
                 <View style={styles.container}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Image source={image2} style={styles.logo} />

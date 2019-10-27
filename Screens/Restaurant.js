@@ -6,7 +6,7 @@ import TabBar from '../Components/TabBar';
 import colors from '../utilities/colors';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-class Restuarant extends Component {
+class Restaurant extends Component {
 
     static navigationOptions = {
         headerStyle: {
@@ -111,4 +111,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Restuarant;
+export default Restaurant;
