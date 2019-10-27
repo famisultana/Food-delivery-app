@@ -29,7 +29,7 @@ const RootStack = createStackNavigator(
     Cart
   },
   {
-    initialRouteName: "Cart",
+    initialRouteName: "MainScreen",
 
     defaultNavigationOptions: {
       headerStyle: {

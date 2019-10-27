@@ -1,38 +1,37 @@
 import React, { Component } from 'react';
-import { Text, View, ImageBackground, StyleSheet, Image, ScrollView,TouchableWithoutFeedback } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet, Image, ScrollView, TouchableWithoutFeedback } from 'react-native';
 import image from '../utilities/images/1.jpg';
 import logo from '../utilities/images/2.jpg';
 import TabBar from '../Components/TabBar';
 import colors from '../utilities/colors';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import TabNavigation from '../Components/TabNavigation';
 
 class Restaurant extends Component {
 
     static navigationOptions = {
         headerStyle: {
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          
+             backgroundColor: 'rgba(0,0,0,0)',
         },
-        headerTintColor:colors.headerFont,
-        headerTitle:'',
+        headerTintColor: colors.headerFont,
+        headerTitle: '',
         headerTitleStyle: {
-          fontWeight: 'bold',
-          alignSelf:'center',
-          justifyContent:'center'
+            fontWeight: 'bold',
+            alignSelf: 'center',
+            justifyContent: 'center'
         },
         headerLeft: (
-          <TouchableWithoutFeedback>
-            <Icon
-            name="bars"
-            color={colors.headerFont}
-            style={{ fontSize: 20, marginLeft: 10 }}
-            onPress={() => alert('back')}
-          >
-          </Icon>
-          </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback onPress={()=>{alert('hello')}}>
+                <Icon
+                    name="arrow-left"
+                    color={colors.headerFont}
+                    style={{ fontSize: 20, marginLeft: 10,color:colors.primary }}
+                >
+                </Icon>
+            </TouchableWithoutFeedback>
         ),
         headerRight: null
-      };
+    };
 
 
     render() {
@@ -66,7 +65,7 @@ class Restaurant extends Component {
                         <Text style={styles.info}>Cash on Delivery</Text>
                     </View>
                 </View>
-                <TabBar />
+                <TabNavigation />
 
             </View>
         );
