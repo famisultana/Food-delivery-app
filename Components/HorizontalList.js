@@ -39,6 +39,7 @@ export default class HorizontalList extends Component {
     return (
       <View style={{marginBottom:10}}>
         <FlatList 
+        showsHorizontalScrollIndicator={false}
         horizontal={true}
             data={data}
             renderItem={({ item }) => <HorizontalCard item={item} navigation={this.props.navigation}/>}/>

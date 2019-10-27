@@ -37,6 +37,7 @@ class VerticalList extends Component {
     render() {
         return (
             <FlatList 
+            showsVerticalScrollIndicator={false}
             data={data}
             renderItem={({ item }) => <VerticalCard item={item} navigation={this.props.navigation}/>}/>
         );
