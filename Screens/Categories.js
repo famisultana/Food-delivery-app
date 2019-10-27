@@ -26,7 +26,7 @@ class Categories extends Component {
                 </View>
                 </TouchableNativeFeedback>
 
-                <TouchableNativeFeedback>
+                <TouchableNativeFeedback onPress={()=>this.props.navigation.navigate('GroceryList')}>
                 <View style={styles.category}>
                     <ImageBackground source={groceryImage} style={{ width: '100%', height: '100%' }}>
                         <Text style={styles.text}>Grocery</Text>

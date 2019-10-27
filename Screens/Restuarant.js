@@ -1,26 +1,43 @@
 import React, { Component } from 'react';
-import { Text, View, ImageBackground, StyleSheet, Image, ScrollView } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet, Image, ScrollView,TouchableWithoutFeedback } from 'react-native';
 import image from '../utilities/images/1.jpg';
 import logo from '../utilities/images/2.jpg';
 import TabBar from '../Components/TabBar';
 import colors from '../utilities/colors';
-import CategoriesTab from '../Components/CategoriesTab';
-import ScrollableTabView, { ScrollableTabBar, DefaultTabBar } from 'react-native-scrollable-tab-view';
-import HorizontalList from '../Components/HorizontalList';
-import Icon from 'react-native-vector-icons/Ionicons';
-import MenuList from '../Components/MenuList';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class Restuarant extends Component {
 
     static navigationOptions = {
-        header: null
-    };
+        headerStyle: {
+          backgroundColor: 'rgba(0,0,0,0.5)',
+          
+        },
+        headerTintColor:colors.headerFont,
+        headerTitle:'',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          alignSelf:'center',
+          justifyContent:'center'
+        },
+        headerLeft: (
+          <TouchableWithoutFeedback>
+            <Icon
+            name="bars"
+            color={colors.headerFont}
+            style={{ fontSize: 20, marginLeft: 10 }}
+            onPress={() => alert('back')}
+          >
+          </Icon>
+          </TouchableWithoutFeedback>
+        ),
+        headerRight: null
+      };
 
 
     render() {
         return (
             <View style={styles.container}>
-
                 <ImageBackground source={image} style={styles.image} imageStyle={{ opacity: 0.6 }}>
                     <View style={styles.cardInfo}>
                         <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white', textTransform: 'uppercase' }}>Delizia</Text>
@@ -29,14 +46,12 @@ class Restuarant extends Component {
                     </View>
                 </ImageBackground>
 
-
-
                 <View style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     margin: 5,
-                    
+
                 }}>
                     <View style={{ alignItems: 'flex-start' }}>
                         <Text style={styles.infoHead}>Avg. Delivery time</Text>
@@ -51,23 +66,8 @@ class Restuarant extends Component {
                         <Text style={styles.info}>Cash on Delivery</Text>
                     </View>
                 </View>
-                <ScrollableTabView
-                    style={styles.container}
-                    tabBarBackgroundColor='white'
-                    tabBarInactiveTextColor={colors.secondary} 
-                    tabBarActiveTextColor={colors.primary}
-                    renderTabBar={() => <ScrollableTabBar style={{borderWidth:0,
-                        borderColor:'rgba(0,0,0,0.5)',
-                        elevation:4,
-                      }}/>}
-                >
-                    <MenuList tabLabel="Cakes" />
-                    <MenuList tabLabel="Brownies" />
-                    <MenuList tabLabel="Cupcakes" />
-                    <MenuList tabLabel="Shakes" />
-                    <MenuList tabLabel="Biscuits" />
-                </ScrollableTabView>
-                
+                <TabBar />
+
             </View>
         );
     }
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(0,0,0,0.4)',
-   
+
     },
     cardText: {
         color: 'white',

@@ -53,14 +53,14 @@ class SearchBar extends Component {
                 <View style={styles.container}>
                     <TouchableWithoutFeedback onPress={this.toggleView}>
                         <View style={{
-                            flexDirection:'row',
-                            alignItems:'center'
+                            flexDirection: 'row',
+                            alignItems: 'center'
                         }}>
-                        <Icon name="th-large" style={{ fontSize: 16, margin: 10 }} />
-                        <Text style={{ borderRightColor: 'gray', borderRightWidth: 0.5, paddingRight: 10 }}>Categories</Text>
+                            <Icon name="th-large" style={{ fontSize: 16, margin: 10 }} />
+                            <Text style={{ borderRightColor: 'gray', borderRightWidth: 0.5, paddingRight: 10 }}>Categories</Text>
                         </View>
                     </TouchableWithoutFeedback>
-                    
+
                     <Icon name='search' style={{ fontSize: 16, margin: 10 }}></Icon>
                     <TextInput placeholder="Search" style={{ width: 180 }} />
                     <Icon name='sort-alpha-down' style={{ fontSize: 18, position: 'absolute', right: 10 }} />

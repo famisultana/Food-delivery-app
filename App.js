@@ -7,11 +7,12 @@ import Home from './Screens/Home';
 import SignIn from './Screens/SignIn';
 import EnterCode from './Screens/EnterCode';
 import SignUp from './Screens/SignUp';
-import Restuarant from './Screens/Restuarant';
+import Restaurants from './Screens/Restuarant';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import colors from './utilities/colors';
 import SplashScreen from './Screens/SplashScreen';
 import LocationBar from './Components/LocationBar';
+import GroceryList from './Screens/GroceryList';
 
 const RootStack = createStackNavigator(
   {
@@ -21,10 +22,11 @@ const RootStack = createStackNavigator(
     EnterCode: EnterCode,
     Categories: Categories,
     MainScreen: Home,
-    Restuarant:Restuarant
+    GroceryList, GroceryList,
+    Restaurants:Restaurants
   },
   {
-    initialRouteName: 'MainScreen',
+    initialRouteName: 'SignIn',
 
     defaultNavigationOptions: {
       headerStyle: {

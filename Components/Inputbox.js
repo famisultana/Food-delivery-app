@@ -11,7 +11,8 @@ export default class Inputbox extends Component {
           placeholder={this.props.placeholder}
           placeholderTextColor="#e1e8ed"
           secureTextEntry={this.props.type === 'password' ? true : false}
-          style={styles.inputbox}></TextInput>
+          style={styles.inputbox}
+          />
       </View>
     );
   }
